@@ -1,0 +1,108 @@
+/* Cyberpunk Horizontal Right-Side Navbar */
+.navbar {
+  position: fixed;
+  top: 50px; /* Margin from the top */
+  right: 0;
+  height: 60px;
+  width: 40%;
+  background: #0F1516;
+  border: 2px solid #08DB89;
+  border-right: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 15px 100%);
+  z-index: 1000;
+}
+
+/* Navbar Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: #08DB89;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Orbitron", sans-serif;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: #0F1516;
+  background: #08DB89;
+  border-radius: 5px;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.menu-toggle span {
+  width: 30px;
+  height: 4px;
+  background: #08DB89;
+  margin: 4px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    width: 25%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-right: 50px;
+    clip-path: polygon(0 0, 100% 20px, 100% 100%, 0 100%);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar.active .nav-links {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .navbar.active .menu-toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .navbar.active .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar.active .menu-toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
