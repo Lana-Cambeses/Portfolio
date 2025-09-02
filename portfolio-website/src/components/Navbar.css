@@ -4,14 +4,14 @@
   top: 50px; /* Margin from the top */
   right: 0;
   height: 60px;
-  width: 40%;
+  width: 35%;
   background: #0F1516;
   border: 2px solid #08DB89;
   border-right: none;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 20px;
+  padding-right: 30px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 15px 100%);
   z-index: 1000;
 }
