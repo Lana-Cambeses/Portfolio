@@ -1,14 +1,14 @@
 {
   "name": "tailwind-course",
   "version": "1.0.0",
+  "description": "Tailwind CSS Course",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
+    "build-css": "npx tailwindcss build src/styles.css -o public/styles.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "tailwindcss": "^4.1.12"
   }
