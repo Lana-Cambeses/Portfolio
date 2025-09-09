@@ -4,8 +4,8 @@ This folder is dedicated to following and experimenting with the Tailwind CSS co
 
 The goal is to understand how Tailwind works in practice and apply what’s learned to real or test projects. This checklist tracks progress through the course's 19 sections.
 
-[] Video 1  
-[] Video 2  
+[x] Video 1  
+[x] Video 2  
 [] Video 3  
 [] Video 4  
 [] Video 5  
