@@ -1,7 +1,11 @@
+import Navbar from './components/Navbar'
+import Home from './pages/Home'
+
 function App() {
   return (
     <>
-      <h1>Portfolio</h1>
+      <Navbar />
+      <Home />
     </>
   )
 }
