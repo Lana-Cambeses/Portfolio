@@ -1,11 +1,141 @@
+/* ===== Reset & Base ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --bg: #0e0f11;
+  --text: #eaeaea;
+  --muted: rgba(255, 255, 255, 0.6);
+  --border: rgba(255, 255, 255, 0.08);
+  --accent: #00ff9c;
+}
+
 body {
-  background: black;
-  color: white;
-  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+}
+
+/* ===== Navbar (floating / sticky) ===== */
+.navbar {
+  position: sticky;
+  top: 1rem;
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+
+  pointer-events: none; /* keeps floating illusion clean */
+}
+
+.navbar-inner {
+  width: calc(100% - 3rem);
+  max-width: 1100px;
+
+  background: rgba(14, 15, 17, 0.8);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  padding: 0.8rem 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  pointer-events: auto;
+}
+
+.navbar-logo {
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links li {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.navbar-links li:hover {
+  color: var(--accent);
+}
+
+/* ===== Home / Hero ===== */
+.home {
+  min-height: calc(100vh - 96px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  max-width: 700px;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--accent),
+    transparent
+  );
+  opacity: 0.6;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+/* ===== Actions ===== */
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-actions button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--text);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hero-actions button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
