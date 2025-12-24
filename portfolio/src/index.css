@@ -84,17 +84,26 @@ body {
 .home {
   min-height: calc(100vh - 96px);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.hero {
+.hero-inner {
   max-width: 700px;
   padding: 2rem;
   position: relative;
 }
 
-.hero::before {
+.hero {
+  min-height: calc(100vh - 96px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.hero-inner::before {
   content: "";
   position: absolute;
   left: 0;
@@ -109,6 +118,7 @@ body {
   );
   opacity: 0.6;
 }
+
 
 .hero-title {
   font-size: 3rem;

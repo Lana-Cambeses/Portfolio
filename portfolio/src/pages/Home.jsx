@@ -1,23 +1,25 @@
 function Home() {
   return (
     <main className="home">
-      <section className="hero">
-        <h1 className="hero-title glitch">
-            <span aria-hidden="true">Hi, I’m Lana.</span>
-            Hi, I’m Lana.
-            <span aria-hidden="true">Hi, I’m Lana.</span>
-        </h1>
+        <section className="hero">
+            <div className="hero-inner">
+                <h1 className="hero-title glitch">
+                    <span aria-hidden="true">Hi, I’m Lana.</span>
+                    Hi, I’m Lana.
+                    <span aria-hidden="true">Hi, I’m Lana.</span>
+                </h1>
 
+                <p className="hero-subtitle">
+                Computer Science student. Creative developer.
+                </p>
 
-        <p className="hero-subtitle">
-          Computer Science student. Creative developer.
-        </p>
+                <div className="hero-actions">
+                    <button>View Projects</button>
+                    <button>Contact</button>
+                </div>
+            </div>
+        </section>
 
-        <div className="hero-actions">
-          <button>View Projects</button>
-          <button>Contact</button>
-        </div>
-      </section>
 
       <section className="projects">
         <div className="projects-header">
