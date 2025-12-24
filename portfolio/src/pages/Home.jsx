@@ -1,4 +1,42 @@
+import { useState, useEffect } from "react";
+
+const projects = [
+  {
+    id: 1,
+    title: "Interactive 3D Renderer",
+    desc: "Real-time rendering engine with custom camera systems, lighting pipeline, and model loading.",
+    tech: "C++ · OpenGL · SDL2",
+    snapshot: "SNAPSHOT_01.png"
+  },
+  {
+    id: 2,
+    title: "Dramatic – Chrome Extension",
+    desc: "Instant explanations for cultural and anime references using Wikipedia API.",
+    tech: "React · Node · Wikipedia API",
+    snapshot: "SNAPSHOT_02.png"
+  },
+  {
+    id: 3,
+    title: "Cyberpunk Portfolio",
+    desc: "Personal portfolio built with a cyberpunk-inspired UI and system-driven layout.",
+    tech: "React · CSS · Vite",
+    snapshot: "SNAPSHOT_03.png"
+  }
+];
+
 function Home() {
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveIndex((prev) => (prev + 1) % projects.length);
+        }, 6000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    const activeProject = projects[activeIndex];
+
   return (
     <main className="home">
         <section className="hero">
@@ -28,22 +66,42 @@ function Home() {
         </div>
 
         <div className="projects-grid">
-          <div className="project-card">
-            <h3>Interactive 3D Renderer</h3>
-            <p>
-              A C++ OpenGL project focused on real-time rendering,
-              camera systems, and lighting.
-            </p>
-            <span className="project-tech">C++ · OpenGL · SDL</span>
-          </div>
+           <div className="module-wrapper">
+                <button
+                    className="module-nav left"
+                    onClick={() =>
+                    setActiveIndex((prev) =>
+                        prev === 0 ? projects.length - 1 : prev - 1
+                    )
+                    }
+                >
+                    &lt;
+                </button>
 
-          <div className="project-card">
-            <h3>Cyberpunk Portfolio</h3>
-            <p>
-              A React-based personal portfolio with a cyberpunk-inspired UI.
-            </p>
-            <span className="project-tech">React · CSS · Vite</span>
-          </div>
+                <div className="project-card active-module">
+                    <span className="project-label">MODULE / ACTIVE</span>
+
+                    <h3>{activeProject.title}</h3>
+
+                    <p>{activeProject.desc}</p>
+
+                    <span className="project-tech">{activeProject.tech}</span>
+
+                    <div className="project-snapshot">
+                    <span>{activeProject.snapshot}</span>
+                    </div>
+                </div>
+
+                <button
+                    className="module-nav right"
+                    onClick={() =>
+                    setActiveIndex((prev) => (prev + 1) % projects.length)
+                    }
+                >
+                    &gt;
+                </button>
+            </div>
+
         </div>
       </section>
     </main>
