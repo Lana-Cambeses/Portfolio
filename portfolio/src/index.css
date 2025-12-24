@@ -10,7 +10,10 @@
   --text: #eaeaea;
   --muted: rgba(255, 255, 255, 0.6);
   --border: rgba(255, 255, 255, 0.08);
-  --accent: #00ff9c;
+
+  --accent: #00ff9c;   /* primary signal */
+  --glitch: #000000;   /* interference */
+  --details: #ce2eff;   /* interference */
 }
 
 body {
@@ -141,4 +144,106 @@ body {
 .hero-actions button:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+/* ===== Subtle Glitch Effect (Soft) ===== */
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch span {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.glitch span:first-child {
+  color: var(--accent);
+  transform: translate(-1px, 0);
+}
+
+.glitch span:last-child {
+  color: var(--glitch);
+  transform: translate(1px, 0);
+}
+
+.glitch:hover span {
+  opacity: 0.9;
+  animation: glitch-soft 220ms steps(2, end);
+}
+
+@keyframes glitch-soft {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(-2px, 1px);
+  }
+  50% {
+    transform: translate(2px, -1px);
+  }
+  75% {
+    transform: translate(-1px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* ===== Projects Section ===== */
+.projects {
+  max-width: 1100px;
+  margin: 6rem auto 4rem;
+  padding: 0 2rem;
+}
+
+.projects-header {
+  margin-bottom: 2.5rem;
+}
+
+.projects-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.projects-header h2 {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.project-card p {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.project-tech {
+  display: inline-block;
+  margin-top: 1.2rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--details);
 }
