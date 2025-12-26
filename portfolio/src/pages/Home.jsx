@@ -39,7 +39,7 @@ function Home() {
 
   return (
     <main className="home">
-        <section className="hero">
+        <section className="hero" id="home">
             <div className="hero-inner">
                 <h1 className="hero-title glitch">
                     <span aria-hidden="true">Hi, I’m Lana.</span>
@@ -59,7 +59,7 @@ function Home() {
         </section>
 
 
-      <section className="projects">
+      <section className="projects" id="projects">
         <div className="projects-header">
           <span className="projects-label">SYSTEM / PROJECTS</span>
           <h2>Selected Work</h2>
