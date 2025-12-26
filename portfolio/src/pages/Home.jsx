@@ -104,7 +104,43 @@ function Home() {
 
         </div>
       </section>
+
+      <section className="about" id="about">
+        <div className="about-header">
+            <span className="about-label">SYSTEM / ABOUT</span>
+            <h2>Operator Profile</h2>
+        </div>
+
+        <div className="about-grid">
+            <div className="about-block">
+                <h3>Identity</h3>
+                <p>
+                    Computer Science student with a strong interest in graphics
+                    programming, UI systems, and creative development.
+                </p>
+                </div>
+
+                <div className="about-block">
+                <h3>Focus</h3>
+                <p>
+                    Building interactive systems that combine low-level programming
+                    with thoughtful user experiences.
+                </p>
+                </div>
+
+                <div className="about-block">
+                <h3>Status</h3>
+                    <p>
+                        Actively developing personal tools and exploring real-time
+                        rendering pipelines.
+                    </p>
+                </div>
+            </div>
+        </section>
+
     </main>
+
+    
   )
 }
 
