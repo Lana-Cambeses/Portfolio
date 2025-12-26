@@ -165,7 +165,19 @@ function Home() {
             </div>
         </section>
 
-        
+        <footer className="footer">
+            <div className="footer-bar">
+                <div className="footer-inner">
+                <span className="footer-status">
+                    SYSTEM STATUS: <span className="footer-online">ONLINE</span>
+                </span>
+                <span className="footer-meta">
+                    © {new Date().getFullYear()} Lana Garcia · All systems operational
+                </span>
+                </div>
+            </div>
+        </footer>
+
 
     </main>
 

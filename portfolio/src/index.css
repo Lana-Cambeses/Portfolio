@@ -452,3 +452,42 @@ body {
   font-weight: 600;
 }
 
+/* ===== Footer Bar (Full Width) ===== */
+.footer {
+  margin-top: 10rem;
+}
+
+.footer-bar {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  border-top: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.footer-status {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.footer-online {
+  color: var(--accent);
+}
+
+.footer-meta {
+  opacity: 0.6;
+}
