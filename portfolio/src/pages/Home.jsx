@@ -138,6 +138,35 @@ function Home() {
             </div>
         </section>
 
+        <section className="contact" id="contact">
+            <div className="contact-header">
+                <span className="contact-label">SYSTEM / CONTACT</span>
+                <h2>Open Channel</h2>
+            </div>
+
+            <div className="contact-console">
+                <div className="console-line">
+                <span className="console-prompt">&gt;</span>
+                <span className="console-key">EMAIL</span>
+                <span className="console-value">lana.garcia.dev@gmail.com</span>
+                </div>
+
+                <div className="console-line">
+                <span className="console-prompt">&gt;</span>
+                <span className="console-key">GITHUB</span>
+                <span className="console-value">github.com/lanagarcia</span>
+                </div>
+
+                <div className="console-line">
+                <span className="console-prompt">&gt;</span>
+                <span className="console-key">LINKEDIN</span>
+                <span className="console-value">linkedin.com/in/lanagarcia</span>
+                </div>
+            </div>
+        </section>
+
+        
+
     </main>
 
     
