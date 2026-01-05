@@ -3,7 +3,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-inner">
         <div className="navbar-logo">
-          <span>LANA</span>
+          <span>Web Portfolio</span>
         </div>
 
         <ul className="navbar-links">

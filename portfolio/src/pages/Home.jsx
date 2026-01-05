@@ -47,14 +47,18 @@ function Home() {
                     <span aria-hidden="true">Hi, I’m Lana.</span>
                 </h1>
 
-                <p className="hero-subtitle">
-                Computer Science student. Creative developer.
-                </p>
+                <p className="hero-subtitle"> Computer Science | Programming Craftsman | Digital Creator </p>
+
+                <br></br>
+                <p className="hero-tagline"> Graphics · Interface · Creative Coding </p>
 
                 <div className="hero-actions">
                     <button>View Projects</button>
                     <button>Contact</button>
                 </div>
+            </div>
+              <div className="hero-visual glitch-frame">
+                <img src="/hero-system.png" alt="System scan visualization" />
             </div>
         </section>
 
@@ -172,7 +176,7 @@ function Home() {
                     SYSTEM STATUS: <span className="footer-online">ONLINE</span>
                 </span>
                 <span className="footer-meta">
-                    © {new Date().getFullYear()} Lana Garcia · All systems operational
+                    © {new Date().getFullYear()} Lana Cambeses · All systems operational
                 </span>
                 </div>
             </div>
