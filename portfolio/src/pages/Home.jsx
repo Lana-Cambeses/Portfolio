@@ -37,6 +37,12 @@ function Home() {
 
     const activeProject = projects[activeIndex];
 
+    const scrollToSection = (id) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
   return (
     <main className="home">
         <section className="hero" id="home">
@@ -53,8 +59,13 @@ function Home() {
                 <p className="hero-tagline"> Graphics · Interface · Creative Coding </p>
 
                 <div className="hero-actions">
-                    <button>View Projects</button>
-                    <button>Contact</button>
+                    <button type="button" onClick={() => scrollToSection("projects")}>
+                        View Projects
+                    </button>
+
+                    <button type="button" onClick={() => scrollToSection("contact")}>
+                        Contact
+                    </button>
                 </div>
             </div>
               <div className="hero-visual glitch-frame">
@@ -119,24 +130,23 @@ function Home() {
             <div className="about-block">
                 <h3>Identity</h3>
                 <p>
-                    Computer Science student with a strong interest in graphics
-                    programming, UI systems, and creative development.
+                    Software developer invested in graphics
+                    programming, system tooling, and creative development
                 </p>
                 </div>
 
                 <div className="about-block">
                 <h3>Focus</h3>
                 <p>
-                    Building interactive systems that combine low-level programming
-                    with thoughtful user experiences.
+                    Low-level programming with emphasis on C++, 
+                    object-oriented design, and program logic
                 </p>
                 </div>
 
                 <div className="about-block">
                 <h3>Status</h3>
                     <p>
-                        Actively developing personal tools and exploring real-time
-                        rendering pipelines.
+                        Exploring rendering pipelines in C++
                     </p>
                 </div>
             </div>
@@ -152,19 +162,19 @@ function Home() {
                 <div className="console-line">
                 <span className="console-prompt">&gt;</span>
                 <span className="console-key">EMAIL</span>
-                <span className="console-value">lana.garcia.dev@gmail.com</span>
+                <span className="console-value">lanacambeses@gmail.com</span>
                 </div>
 
                 <div className="console-line">
                 <span className="console-prompt">&gt;</span>
                 <span className="console-key">GITHUB</span>
-                <span className="console-value">github.com/lanagarcia</span>
+                <span className="console-value">github.com/Lana-Cambeses</span>
                 </div>
 
                 <div className="console-line">
                 <span className="console-prompt">&gt;</span>
                 <span className="console-key">LINKEDIN</span>
-                <span className="console-value">linkedin.com/in/lanagarcia</span>
+                <span className="console-value">linkedin.com/in/lanacambeses</span>
                 </div>
             </div>
         </section>

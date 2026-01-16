@@ -436,8 +436,9 @@ section {
 
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
 }
 
 .about-block {
@@ -445,6 +446,7 @@ section {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.02);
+  height: 130%;
 }
 
 .about-block h3 {
@@ -454,7 +456,9 @@ section {
 }
 
 .about-block p {
-  margin-top: 0.8rem;
+  max-width: 25ch;   /* adjust: 30–38ch */
+  line-height: 1.35;
+  margin-top: 2rem;
   font-size: 0.9rem;
   color: var(--muted);
 }
